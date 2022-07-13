@@ -68,6 +68,16 @@ label {
   margin: auto;
 }
 
+// .address-one{
+//   position: relative;
+//   z-index: -1;
+// }
+
+.venues_address1 {
+  position: relative;
+  z-index: 1000;
+}
+
 @media screen and (min-width: 480px){
   .footer {
     display: none;
@@ -204,10 +214,10 @@ label {
     z-index: 1000;
   }
 
-  // .address-one{
-  //   position: relative;
-  //   z-index: -1;
-  // }
+  .address-one{
+    position: relative;
+    z-index: -1;
+  }
 
   // .mb-3.string.required.venues_address2 {
   // color: grey;
