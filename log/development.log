@@ -1,0 +1,82 @@
+Started GET "/" for ::1 at 2022-07-13 17:19:43 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 5846)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-07-13 17:19:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 644)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.1ms | Allocations: 23442)
+  Rendered layout layouts/application.html.erb (Duration: 198.1ms | Allocations: 65861)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 3.7ms | Allocations: 75717)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
+        on line 7:1 of app/assets/stylesheets/application.scss
+>> @import "bootstrap/scss/bootstrap";
+
+   ^
+):
+  
+app/assets/stylesheets/application.scss:7
+Started GET "/users/sign_in" for ::1 at 2022-07-13 17:25:04 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 644)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 19933)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | Allocations: 48978)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 4.3ms | Allocations: 59067)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
+        on line 7:1 of app/assets/stylesheets/application.scss
+>> @import "bootstrap/scss/bootstrap";
+
+   ^
+):
+  
+app/assets/stylesheets/application.scss:7
+Started GET "/users/sign_in" for ::1 at 2022-07-13 17:26:15 +0100
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 644)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 19933)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jimmyyuen/code/jimmehyuen/halfway-v2/public/packs
+[Webpacker] Hash: 9da4f6d02d4008c53b4b
+Version: webpack 4.46.0
+Time: 894ms
+Built at: 07/13/2022 5:26:20 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-4749117d8427e5730fc8.js   1.54 MiB  application  [emitted] [immutable]  application
+js/application-4749117d8427e5730fc8.js.map   1.53 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-4749117d8427e5730fc8.js js/application-4749117d8427e5730fc8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 277 bytes {application} [built]
+[./app/javascript/controllers/disable_button_controller.js] 998 bytes {application} [optional] [built]
+[./app/javascript/controllers/geocoder_controller.js] 5.31 KiB {application} [optional] [built]
+[./app/javascript/controllers/hello_controller.js] 3.51 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/mapbox_controller.js] 5.77 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {application} [built]
+    + 103 hidden modules
+
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 208)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 4732.2ms | Allocations: 173291)
+Completed 200 OK in 4750ms (Views: 4735.4ms | ActiveRecord: 4.2ms | Allocations: 183429)
+
+
