@@ -10148,3 +10148,113 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 21288)
 
 
+Started GET "/" for ::1 at 2022-07-14 16:30:34 +0100
+  
+ArgumentError (Before process_action callback :authenticate_user! has not been defined):
+  
+app/controllers/pages_controller.rb:2:in `<class:PagesController>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-07-14 16:30:51 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 16248)
+Completed 200 OK in 19ms (Views: 19.0ms | Allocations: 17082)
+
+
+Started GET "/" for ::1 at 2022-07-14 16:30:55 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.6ms | Allocations: 4072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 15729)
+Completed 200 OK in 31ms (Views: 30.3ms | Allocations: 16225)
+
+
+Started GET "/" for ::1 at 2022-07-14 16:31:08 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 15747)
+Completed 200 OK in 33ms (Views: 30.4ms | Allocations: 16197)
+
+
+Started GET "/" for ::1 at 2022-07-14 16:31:12 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 17.5ms | Allocations: 4072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 15725)
+Completed 200 OK in 30ms (Views: 29.9ms | Allocations: 16176)
+
+
+Started GET "/venues?venues%5Baddress1%5D=Canary+Wharf%2C+Tower+Hamlets%2C+London%2C+E14+5AH%2C+United+Kingdom&venues%5Baddress2%5D=Westminster%2C+Greater+London%2C+England%2C+United+Kingdom&commit=Meet+Halfway%21" for ::1 at 2022-07-14 16:31:30 +0100
+Processing by VenuesController#index as HTML
+  Parameters: {"venues"=>{"address1"=>"Canary Wharf, Tower Hamlets, London, E14 5AH, United Kingdom", "address2"=>"Westminster, Greater London, England, United Kingdom"}, "commit"=>"Meet Halfway!"}
+  [1m[36mVenue Load (7.4ms)[0m  [1m[34mSELECT venues.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((51.502696225 - venues.latitude) * PI() / 180 / 2), 2) + COS(51.502696225 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-0.07302492128633126 - venues.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((venues.longitude - -0.07302492128633126) / 57.2957795), ((venues.latitude - 51.502696225) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "venues" WHERE (venues.latitude BETWEEN 51.49370300894081 AND 51.51168944105919 AND venues.longitude BETWEEN -0.08747236976405744 AND -0.05857747280860508 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((51.502696225 - venues.latitude) * PI() / 180 / 2), 2) + COS(51.502696225 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-0.07302492128633126 - venues.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 1) AND (venues.latitude IS NOT NULL AND venues.longitude IS NOT NULL) ORDER BY distance ASC[0m
+  ↳ app/controllers/venues_controller.rb:38:in `map'
+  Rendered venues/_halfway_window.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendering layout layouts/application.html.erb
+  Rendering venues/index.html.erb within layouts/application
+  Rendered venues/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 12134)
+Completed 200 OK in 1318ms (Views: 28.4ms | ActiveRecord: 44.7ms | Allocations: 27034)
+
+
+Started GET "/venues?venues%5Baddress1%5D=Canary+Wharf%2C+Tower+Hamlets%2C+London%2C+E14+5AH%2C+United+Kingdom&venues%5Baddress2%5D=Westminster%2C+Greater+London%2C+England%2C+United+Kingdom&commit=Meet+Halfway%21" for ::1 at 2022-07-14 16:31:34 +0100
+Processing by VenuesController#index as HTML
+  Parameters: {"venues"=>{"address1"=>"Canary Wharf, Tower Hamlets, London, E14 5AH, United Kingdom", "address2"=>"Westminster, Greater London, England, United Kingdom"}, "commit"=>"Meet Halfway!"}
+  [1m[36mVenue Load (6.8ms)[0m  [1m[34mSELECT venues.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((51.502696225 - venues.latitude) * PI() / 180 / 2), 2) + COS(51.502696225 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-0.07302492128633126 - venues.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((venues.longitude - -0.07302492128633126) / 57.2957795), ((venues.latitude - 51.502696225) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "venues" WHERE (venues.latitude BETWEEN 51.49370300894081 AND 51.51168944105919 AND venues.longitude BETWEEN -0.08747236976405744 AND -0.05857747280860508 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((51.502696225 - venues.latitude) * PI() / 180 / 2), 2) + COS(51.502696225 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-0.07302492128633126 - venues.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 1) AND (venues.latitude IS NOT NULL AND venues.longitude IS NOT NULL) ORDER BY distance ASC[0m
+  ↳ app/controllers/venues_controller.rb:38:in `map'
+  Rendered venues/_halfway_window.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendering layout layouts/application.html.erb
+  Rendering venues/index.html.erb within layouts/application
+  Rendered venues/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 12010)
+Completed 200 OK in 1330ms (Views: 23.0ms | ActiveRecord: 6.8ms | Allocations: 19458)
+
+
+Started GET "/" for ::1 at 2022-07-14 16:31:48 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 15854)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 16308)
+
+
+Started GET "/" for ::1 at 2022-07-14 16:31:52 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 15725)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 16177)
+
+
