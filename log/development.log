@@ -11439,3 +11439,32 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.0ms | Allocations: 16323)
 
 
+Started GET "/" for ::1 at 2022-07-15 16:28:40 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 63.7ms | Allocations: 47489)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 61170)
+Completed 200 OK in 84ms (Views: 79.5ms | ActiveRecord: 0.0ms | Allocations: 64922)
+
+
+Started GET "/venues?venues%5Baddress1%5D=London%2C+Greater+London%2C+England%2C+United+Kingdom&venues%5Baddress2%5D=Manchester%2C+Greater+Manchester%2C+England%2C+United+Kingdom&commit=Meet+Halfway%21" for ::1 at 2022-07-15 16:28:47 +0100
+Processing by VenuesController#index as HTML
+  Parameters: {"venues"=>{"address1"=>"London, Greater London, England, United Kingdom", "address2"=>"Manchester, Greater Manchester, England, United Kingdom"}, "commit"=>"Meet Halfway!"}
+  [1m[36mVenue Load (5.4ms)[0m  [1m[34mSELECT venues.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((52.493405550000006 - venues.latitude) * PI() / 180 / 2), 2) + COS(52.493405550000006 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-1.1863811 - venues.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((venues.longitude - -1.1863811) / 57.2957795), ((venues.latitude - 52.493405550000006) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "venues" WHERE (venues.latitude BETWEEN 52.48441233394082 AND 52.502398766059194 AND venues.longitude BETWEEN -1.2011518574086997 AND -1.1716103425913003 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((52.493405550000006 - venues.latitude) * PI() / 180 / 2), 2) + COS(52.493405550000006 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-1.1863811 - venues.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 1) AND (venues.latitude IS NOT NULL AND venues.longitude IS NOT NULL) ORDER BY distance ASC[0m
+  ↳ app/controllers/venues_controller.rb:38:in `map'
+  Rendered venues/_halfway_window.html.erb (Duration: 2.9ms | Allocations: 164)
+  Rendering layout layouts/application.html.erb
+  Rendering venues/index.html.erb within layouts/application
+  Rendered venues/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 12255)
+Completed 200 OK in 1188ms (Views: 20.8ms | ActiveRecord: 16.5ms | Allocations: 26953)
+
+
