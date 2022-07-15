@@ -11334,3 +11334,55 @@ Processing by VenuesController#index as HTML
 Completed 200 OK in 1379ms (Views: 22.7ms | ActiveRecord: 2.9ms | Allocations: 19261)
 
 
+Started GET "/" for ::1 at 2022-07-15 14:54:50 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 15834)
+Completed 200 OK in 37ms (Views: 33.6ms | Allocations: 16287)
+
+
+Started GET "/" for ::1 at 2022-07-15 14:55:03 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 15748)
+Completed 200 OK in 46ms (Views: 45.2ms | Allocations: 16144)
+
+
+Started GET "/venues?venues%5Baddress1%5D=Westminster%2C+Greater+London%2C+England%2C+United+Kingdom&venues%5Baddress2%5D=Wembley%2C+Greater+London%2C+England%2C+United+Kingdom&commit=Meet+Halfway%21" for ::1 at 2022-07-15 14:55:46 +0100
+Processing by VenuesController#index as HTML
+  Parameters: {"venues"=>{"address1"=>"Westminster, Greater London, England, United Kingdom", "address2"=>"Wembley, Greater London, England, United Kingdom"}, "commit"=>"Meet Halfway!"}
+  [1m[36mVenue Load (13.0ms)[0m  [1m[34mSELECT venues.*, 6371.0 * 2 * ASIN(SQRT(POWER(SIN((51.528256675 - venues.latitude) * PI() / 180 / 2), 2) + COS(51.528256675 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-0.2030715968970072 - venues.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((venues.longitude - -0.2030715968970072) / 57.2957795), ((venues.latitude - 51.528256675) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "venues" WHERE (venues.latitude BETWEEN 51.51926345894081 AND 51.53724989105919 AND venues.longitude BETWEEN -0.21752715488266652 AND -0.1886160389113479 AND (6371.0 * 2 * ASIN(SQRT(POWER(SIN((51.528256675 - venues.latitude) * PI() / 180 / 2), 2) + COS(51.528256675 * PI() / 180) * COS(venues.latitude * PI() / 180) * POWER(SIN((-0.2030715968970072 - venues.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 1) AND (venues.latitude IS NOT NULL AND venues.longitude IS NOT NULL) ORDER BY distance ASC[0m
+  ↳ app/controllers/venues_controller.rb:38:in `map'
+  Rendered venues/_halfway_window.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendering layout layouts/application.html.erb
+  Rendering venues/index.html.erb within layouts/application
+  Rendered venues/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 11936)
+Completed 200 OK in 1325ms (Views: 42.1ms | ActiveRecord: 74.5ms | Allocations: 23522)
+
+
+Started GET "/" for ::1 at 2022-07-15 14:56:18 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 15746)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 16203)
+
+
